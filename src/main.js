@@ -1,6 +1,4 @@
-// ************* promtion cross button **********************
-
-
+// ************* promotion cross button **********************
 const promoBanner = document.querySelector("#promo-banner");
 const crossBtnIcon = document.querySelector("#cross-btn i");
 
@@ -14,9 +12,7 @@ crossBtnIcon.addEventListener("click", function () {
   }, 300); // Match this to your animation duration
 });
 
-
-
-// ****************** hero section swiper    ******************************
+// ****************** hero section swiper ******************************
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   grabCursor: true,
@@ -45,22 +41,11 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// //  video configuration
-// video.addEventListener('click', function () {
-//     if (video.paused) {
-//       video.play(); // Play video if paused
-//     } else {
-//       video.pause(); // Pause video if playing
-//     }
-//   });
-
-
-//  ************** cross hamburger working  ***********
-
+// ************** cross hamburger working ***********
 const crossHamburgerBtn = document.querySelector("#cross-hamburger-btn");
 const mobileMenu = document.querySelector("#mobile-menu");
 const heroSection = document.querySelector(".hero-section");
-const menuItemSection = document.querySelector(".mobile-menu-item")
+const menuItemSection = document.querySelector(".mobile-menu-item");
 // Set initial state
 function showMenu() {
   mobileMenu.classList.remove("hidden");
@@ -80,9 +65,7 @@ showMenu();
 mobileMenu.addEventListener("click", showHamburger);
 crossHamburgerBtn.addEventListener("click", showMenu);
 
-
-
-// ************ arrival section swiper   ******************************
+// ************ arrival section swiper ******************************
 var featureSwiper = new Swiper(".featureSwiper", {
   grabCursor: true,
   slidesPerView: "auto",
@@ -111,12 +94,14 @@ var featureSwiper = new Swiper(".featureSwiper", {
   },
 });
 
-
 // tabs **************
 function showTab(tabNumber) {
   // Hide all tab contents
   const tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach((tab) => tab.classList.add("hidden"));
+  tabs.forEach((tab) => {
+    tab.classList.add("hidden");
+    tab.style.opacity = 0;
+  });
 
   // Remove active class from all buttons
   const buttons = document.querySelectorAll("button");
@@ -128,68 +113,141 @@ function showTab(tabNumber) {
   const activeTab = document.getElementById(`tab-content-${tabNumber}`);
   activeTab.classList.remove("hidden");
 
+  // Add fade-in animation
+  setTimeout(() => {
+    activeTab.style.opacity = 1;
+  }, 10);
+
   // Add active styles to the selected tab button
   const activeButton = document.getElementById(`tab-${tabNumber}`);
   activeButton.classList.add("border-b-2", "border-black", "text-500");
 }
 
 // Initialize by showing the first tab
-showTab(1);
-
-function toggleSection(id) {
-  const section = document.getElementById(id);
-  section.classList.toggle("hidden");
-}
-
-
-// Sign up page *******************
-function togglePasswordVisibility() {
-    const passwordField = document.getElementById('password');
-    const currentType = passwordField.type;
-    
-    // Toggle password field type between 'password' and 'text'
-    if (currentType === 'password') {
-        passwordField.type = 'text';
-    } else {
-        passwordField.type = 'password';
-    }
-}
-// ************ product page   ***********************
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize thumbnail swiper
-  var productThumbsSwiper = new Swiper(".product-thumbs-swiper", {
-      spaceBetween: 10,
-      slidesPerView: 3,
-      freeMode: true,
-      watchSlidesProgress: true,
+  // Add CSS for smooth transitions
+  const style = document.createElement("style");
+  style.textContent = `
+    .tab-content {
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
+    
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+    
+    .accordion-content.active {
+      max-height: 500px; /* Adjust based on your content */
+    }
+    
+    details {
+      transition: all 0.3s ease;
+    }
+    
+    summary {
+      cursor: pointer;
+    }
+    
+    /* Animation for promotion banner */
+    .slide-up {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-out;
+    }
+    
+    /* For smooth fade-in effect */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.3s forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Initialize the first tab
+  showTab(1);
+
+  // Initialize accordions
+  const accordionSections = document.querySelectorAll("#info, #questions");
+  accordionSections.forEach((section) => {
+    section.classList.add("accordion-content");
+    if (!section.classList.contains("hidden")) {
+      section.classList.add("active");
+    }
+  });
+});
+
+// Updated toggleSection function for accordion behavior with animations
+function toggleSection(id) {
+  // Get all sections that can be toggled
+  const allSections = ["info", "questions"];
+
+  // Close all sections except the one being toggled
+  allSections.forEach((sectionId) => {
+    if (sectionId !== id) {
+      const section = document.getElementById(sectionId);
+      if (section && !section.classList.contains("hidden")) {
+        section.classList.remove("active");
+        // Wait for animation to complete before hiding
+        setTimeout(() => {
+          section.classList.add("hidden");
+        }, 300);
+      }
+    }
   });
 
-  // Initialize main swiper with thumbs
-  var productMainSwiper = new Swiper(".product-main-swiper", {
-      spaceBetween: 10,
-      grabCursor: true,
-      navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-      },
-      thumbs: {
-          swiper: productThumbsSwiper,
-      },
-  });
-// Accordion functionality for FAQ section
-document.addEventListener('DOMContentLoaded', () => {
-  const details = document.querySelectorAll('details');
+  // Toggle the clicked section
+  const section = document.getElementById(id);
+  if (section.classList.contains("hidden")) {
+    section.classList.remove("hidden");
+    // Trigger reflow to allow animation to work
+    section.offsetHeight;
+    section.classList.add("active");
+    section.classList.add("fade-in");
+  } else {
+    section.classList.remove("active");
+    // Wait for animation to complete before hiding
+    setTimeout(() => {
+      section.classList.add("hidden");
+    }, 300);
+  }
+}
 
-  details.forEach(detail => {
-    detail.addEventListener('toggle', () => {
-      if (detail.open) {
-        details.forEach(otherDetail => {
-          if (otherDetail !== detail && otherDetail.open) {
-            otherDetail.open = false;
+// Add event listeners for the details elements in desktop view (FAQ questions)
+document.addEventListener("DOMContentLoaded", function () {
+  const detailsElements = document.querySelectorAll("details");
+
+  // Add smooth animation for details elements
+  detailsElements.forEach((details) => {
+    const summary = details.querySelector("summary");
+    const content = details.querySelector("p");
+
+    if (content) {
+      content.style.transition = "all 0.3s ease-in-out";
+    }
+
+    details.addEventListener("toggle", function (e) {
+      // Only run this when a details element is being opened
+      if (this.open) {
+        // Add animation class
+        if (content) content.classList.add("fade-in");
+
+        // Close all other details elements
+        detailsElements.forEach((otherDetails) => {
+          if (otherDetails !== this && otherDetails.open) {
+            otherDetails.open = false;
           }
         });
+      } else {
+        // Remove animation class
+        if (content) content.classList.remove("fade-in");
       }
     });
   });
-});
 });
