@@ -1,16 +1,15 @@
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from "vite";
+
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-  ],
   build: {
-    outDir: 'dist',
-    input: {
-      main: 'index.html',
-      bedroom: 'bed_room.html',
-      livingroom: 'living_room.html',
-      curtains: 'curtains.html'
-    }
+    outDir: "dist",
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        bed_room: "bed_room.html",
+        living_room: "living_room.html",
+        curtains: "curtains.html",
+      },
+    },
   },
-})
+});
