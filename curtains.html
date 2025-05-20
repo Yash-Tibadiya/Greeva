@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./images/3legant-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Flow+Circular&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <!-- css linking -->
+  <!-- swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- local css -->
+  <link rel="stylesheet" href="./src/style.css">
+  <!-- title -->
+  <title>Greeva.</title>
+  <!-- js linking -->
+  <!-- font kit  -->
+  <script src="https://kit.fontawesome.com/78151e0cc2.js" crossorigin="anonymous"></script>
+  <!-- swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body class="font-inter select-none">
+  <!-- promotional banner  -->
+  <div class="flex items-center justify-center w-full py-2 bg-promo-gray " id="promo-banner">
+    <div class="mr-2 percent-icon">
+      <img src="./images/ticket-percent.svg" alt="percentage-icon">
+    </div>
+    <h2 class="font-semibold text-xs sm:text-[16px] md:text[18px] text-slate-800">
+      30% off storewide — Limited time!
+      <!-- <a href="https://www.enactsoft.com/solutions/laraback/#"><span
+          class="text-blue-500 ml-1 py-0.5 border-b-1 border-cta-blue cursor-pointer group transition-all hover:text-blue-700">
+          Shop Now
+          <i
+            class="transition-transform duration-300 transform fa-solid fa-arrow-right-long group-hover:translate-x-1 hover:text-blue-700"></i>
+        </span></a> -->
+    </h2>
+    <!--promotion cross-btn -->
+    <div class="absolute top-2 right-2 sm:right-3 " id="cross-btn">
+      <i class="fa-solid fa-xmark fa-flip-horizontal fa-lg hover:cursor-pointer" style="color: #050505;"></i>
+    </div>
+    <!-- end of cross-btn -->
+  </div>
+  <!-- end of promotional banner -->
+  <!-- header -->
+  <div class="container ">
+    <header id="home">
+      <!-- navbar -->
+      <nav class="flex items-center py-3 justify-between">
+        <!-- mobile menu (bars icon) -->
+        <div class="ml-2 md:hidden" id="mobile-menu">
+          <i class="fa-solid fa-bars fa-xl" style="color: #111212;"></i>
+        </div>
+        <!-- hamburger cross icon -->
+        <div class="hidden ml-2 md:hidden " id="cross-hamburger-btn">
+          <i class="fa-solid fa-xmark fa-flip-horizontal fa-xl w-[21px]  " style="color: #050505;"></i>
+        </div>
+
+
+        <!-- logo -->
+        <h2 class="text-[22px] md:text-[24px] font-medium cursor-pointer pl-3 md:pl-0">
+          <a href="index.html">
+            Greeva.
+          </a>
+        </h2>
+
+        <ul class="hidden gap-10 font-semibold text-gray-600 cursor-pointer md:flex ">
+          <li>
+            <a href="index.html" class="relative group hover:text-common-black">
+              Home
+              <span
+                class="absolute left-0 bottom-0 w-0 h-[2px] bg-common-black transition-all group-hover:w-full"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/yKAw5VenKbx13t9m9" target="_blank"
+              class="relative group hover:text-common-black">
+              Shop
+              <span
+                class="absolute left-0 bottom-0 w-0 h-[2px] bg-common-black transition-all group-hover:w-full"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#Product" class="relative group hover:text-common-black">
+              Product
+              <span
+                class="absolute left-0 bottom-0 w-0 h-[2px] bg-common-black transition-all group-hover:w-full"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#stay-connected" class="relative group hover:text-common-black">
+              Contact Us
+              <span
+                class="absolute left-0 bottom-0 w-0 h-[2px] bg-common-black transition-all group-hover:w-full"></span>
+            </a>
+          </li>
+        </ul>
+
+
+      </nav>
+      <!-- end of navbar -->
+    </header>
+  </div>
+  <!-- end of header -->
+  <!-- Menu item section  -->
+  <div class="hidden mb-5 mobile-menu-item md:hidden" id="menu-item-section ">
+    <div class="container">
+      <!-- <div>
+        <div class="my-2">
+          <div
+            class="flex items-center rounded-md bg-common-white pl-3 outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-slate-600">
+            <div class="text-base text-gray-500 select-none shrink-0 sm:text-sm/6"><img src="./images/search 02.svg"
+                alt=""></div>
+            <input type="text" name="price" id="price"
+              class="block min-w-0 grow py-2.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+              placeholder="search">
+          </div>
+        </div>
+      </div> -->
+      <ul class="flex flex-col gap-3 ">
+        <div class="flex items-center justify-between pb-3 3legent-home border-b-3 border-slate-200">
+          <li class="text-xl font-semibold ">Greeva Home </li>
+        </div>
+        <li class="text-xl font-semibold ">Pages </li>
+        <li>
+          <a href="index.html" class="relative group hover:text-common-black">
+            Home
+            <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-common-black transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="./product.html" class="relative group hover:text-common-black">
+            Product
+            <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-common-black transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://maps.app.goo.gl/yKAw5VenKbx13t9m9" target="_blank"
+            class="relative group hover:text-common-black">
+            Shop
+            <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-common-black transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#stay-connected" class="relative group hover:text-common-black">
+            Contact Us
+            <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-common-black transition-all group-hover:w-full"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- end of hamburger item section  -->
+
+  <!-- Gallery Section -->
+  <section class="max-w-screen-xl mx-auto px-4 pb-16" aria-label="Living Room Gallery">
+    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-3 gap-4 space-y-4">
+      <img src="./images/curtains/1.jpg" alt="Living Room Image 1" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/2.jpg" alt="Living Room Image 2" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/3.jpg" alt="Living Room Image 3" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/4.jpg" alt="Living Room Image 4" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/5.jpg" alt="Living Room Image 5" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/6.jpg" alt="Living Room Image 6" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/7.jpg" alt="Living Room Image 7" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/8.jpg" alt="Living Room Image 8" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/9.jpg" alt="Living Room Image 9" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/10.jpg" alt="Living Room Image 10" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/11.jpg" alt="Living Room Image 11" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/12.jpg" alt="Living Room Image 12" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/13.jpg" alt="Living Room Image 13" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/14.jpg" alt="Living Room Image 14" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/15.jpg" alt="Living Room Image 15" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/16.jpg" alt="Living Room Image 16" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/17.jpg" alt="Living Room Image 17" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/18.jpg" alt="Living Room Image 18" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/19.jpg" alt="Living Room Image 19" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/20.jpg" alt="Living Room Image 20" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/21.jpg" alt="Living Room Image 21" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/22.jpg" alt="Living Room Image 22" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/23.jpg" alt="Living Room Image 23" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/24.jpg" alt="Living Room Image 24" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+      <img src="./images/curtains/25.jpg" alt="Living Room Image 25" loading="lazy"
+        class="w-full mb-4 rounded-lg cursor-pointer hover:opacity-90 transition" />
+    </div>
+  </section>
+
+
+  <section class="relative overflow-hidden bg-slate-100" id="stay-connected">
+    <div class="flex items-center justify-between max-w-screen-xl mx-auto py-[100px]">
+      <!-- Left: Drawer image -->
+      <div
+        class="w-1/3 max-h-[600px] hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 translate-x-[-200px]">
+        <img src="./images/newsletter-2img.png" class="w-full" alt="Drawer" />
+      </div>
+
+      <!-- Center: Updated content -->
+      <div class="relative z-10 w-full px-4 mx-auto text-center md:w-2/4">
+        <div class="mb-6">
+          <h2 class="mb-2 text-3xl font-medium">Let's Stay Connected</h2>
+          <p class="text-sm text-gray-600">Get updates and exclusive deals by contacting us at <br><strong>+91 80370
+              13963</strong></p>
+        </div>
+      </div>
+
+      <!-- Right: Sofa image -->
+      <div
+        class="max-w-[900px] hidden lg:block absolute right-0 top-[200px] transform -translate-y-1/2 translate-x-[500px]">
+        <img src="./images/newsletter-img-1.png" class="w-[900px] xl:w-[1000px] max-h-[500px]"
+          alt="Armchair with throw blanket" />
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section -->
+  <section class="bg-common-black text-common-white">
+    <div class="container  pt-[80px] pb-[55px] ">
+      <!-- Desktop version -->
+      <div class="hidden md:block">
+        <!-- Top section with logo and navigation -->
+        <div class="flex items-center justify-between mb-6">
+          <!-- Left: Logo and tagline -->
+          <div class="flex items-center">
+            <h2 class="text-[22px] font-medium mr-6"><a href="#">Greeva.</a></h2>
+            <div class="w-px h-6 mx-4 bg-gray-700"></div>
+            <p class="text-[14px] text-gray-300">Decoration Store</p>
+          </div>
+
+          <!-- Right: Navigation links -->
+          <!-- <ul class="flex items-center gap-8 text-[14px]">
+            <li class="cursor-pointer hover:text-gray-300">Home</li>
+            <li href="https://maps.app.goo.gl/yKAw5VenKbx13t9m9" class="cursor-pointer hover:text-gray-300">Shop</li>
+            <li class="cursor-pointer hover:text-gray-300">Product</li>
+            <li class="cursor-pointer hover:text-gray-300">Contact Us</li>
+          </ul> -->
+        </div>
+
+        <!-- Bottom section with copyright and social -->
+        <div class="pt-6 border-t border-gray-800">
+          <div class="flex items-center justify-between">
+            <!-- Left: Copyright text -->
+            <div class="text-[12px] text-gray-300">
+              Copyright © 2023 Greeva. All rights reserved
+            </div>
+            <!-- Middle: Terms links -->
+            <div class="flex gap-4 text-[12px] text-gray-300">
+              <a href="#" class="hover:text-common-white">Privacy Policy</a>
+              <a href="#" class="hover:text-common-white">Terms of Use</a>
+            </div>
+            <!-- Right: Social icons -->
+            <div class="flex gap-6">
+              <a href="https://www.instagram.com/greevafurniture" target="_blank" aria-label="Instagram"
+                class="hover:text-gray-300">
+                <svg xmlns="ht</a>tp://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/p/Greeva-Home-decor-Furniture-100076243147945" target="_blank"
+                aria-label="Facebook" class="hover:text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <!-- <a href="#" aria-label="YouTube" class="hover:text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path
+                    d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
+                  </path>
+                  <path d="m10 15 5-3-5-3z"></path>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile version (exactly matching the image) -->
+      <div class="flex flex-col items-center text-center md:hidden">
+        <!-- Logo section -->
+        <h2 class="text-[22px] font-medium mb-4">
+          <a href="#">
+            Greeva.
+          </a>
+        </h2>
+        <div class="w-[40px] h-[1px] bg-gray-700 mb-4"></div>
+        <p class="text-[14px] text-gray-300 mb-8">Decoration Store</p>
+        <!-- Navigation links - vertical stack -->
+        <ul class="flex flex-col gap-6 text-[14px] mb-8">
+          <li class="cursor-pointer hover:text-gray-300">Home</li>
+          <li class="cursor-pointer hover:text-gray-300">Shop</li>
+          <li class="cursor-pointer hover:text-gray-300">Product</li>
+          <li class="cursor-pointer hover:text-gray-300">Contact Us</li>
+        </ul>
+        <!-- Horizontal divider -->
+        <div class="w-full h-[1px] bg-gray-800 mb-8"></div>
+        <!-- Social icons -->
+        <div class="flex justify-center gap-6 mb-4">
+          <a href="#" aria-label="Instagram" class="hover:text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="hover:text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@FunwithGaurav3103" aria-label="YouTube" class="hover:text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <path
+                d="M2.5 17a24.12 24.12 0 0 1 0-10a2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17">
+              </path>
+              <path d="m10 15 5-3-5-3z"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Privacy and Terms links -->
+        <div class="flex justify-center gap-4 text-[12px] text-gray-300 mb-4">
+          <a href="#" class="hover:text-common-white">Privacy Policy</a>
+          <a href="#" class="hover:text-common-white">Terms of Use</a>
+        </div>
+        <!-- Copyright text -->
+        <div class="text-[12px] text-gray-300">
+          Copyright © 2023 Greeva. All rights reserved
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ************* promotion cross button **********************
+    document.addEventListener("DOMContentLoaded", function () {
+      const promoBanner = document.querySelector("#promo-banner");
+      const crossBtnIcon = document.querySelector("#cross-btn i");
+
+      if (crossBtnIcon) {
+        crossBtnIcon.addEventListener("click", function () {
+          // Add the slide-up class to trigger the animation
+          promoBanner.classList.add("slide-up");
+
+          // After animation completes, remove the banner completely from DOM
+          setTimeout(() => {
+            promoBanner.remove(); // This removes the element completely from the DOM
+          }, 300); // Match this to your animation duration
+        });
+      }
+
+      // ****************** hero section swiper ******************************
+      // Debug element presence
+      console.log(
+        "Swiper container exists:",
+        !!document.querySelector(".mySwiper")
+      );
+
+      try {
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          grabCursor: true,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: true,
+          },
+          breakpoints: {
+            768: {
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                enabled: true,
+              },
+            },
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            enabled: false,
+          },
+          on: {
+            init: function () {
+              console.log("Swiper initialized successfully");
+            },
+            error: function (e) {
+              console.error("Swiper error:", e);
+            },
+          },
+        });
+      } catch (error) {
+        console.error("Error initializing Swiper:", error);
+      }
+
+      // ************** cross hamburger working ***********
+      const crossHamburgerBtn = document.querySelector("#cross-hamburger-btn");
+      const mobileMenu = document.querySelector("#mobile-menu");
+      const heroSection = document.querySelector(".hero-section");
+      const menuItemSection = document.querySelector(".mobile-menu-item");
+
+      // Set initial state
+      function showMenu() {
+        if (mobileMenu && crossHamburgerBtn && heroSection && menuItemSection) {
+          mobileMenu.classList.remove("hidden");
+          crossHamburgerBtn.classList.add("hidden");
+          heroSection.classList.remove("hidden");
+          menuItemSection.classList.add("hidden");
+        }
+      }
+
+      function showHamburger() {
+        if (mobileMenu && crossHamburgerBtn && heroSection && menuItemSection) {
+          mobileMenu.classList.add("hidden");
+          crossHamburgerBtn.classList.remove("hidden");
+          heroSection.classList.add("hidden");
+          menuItemSection.classList.remove("hidden");
+        }
+      }
+
+      // Initial state - showing the menu bars icon first
+      showMenu();
+
+      // Add event listeners
+      if (mobileMenu) {
+        mobileMenu.addEventListener("click", showHamburger);
+      }
+
+      if (crossHamburgerBtn) {
+        crossHamburgerBtn.addEventListener("click", showMenu);
+      }
+
+      // ************ arrival section swiper ******************************
+      try {
+        if (document.querySelector(".featureSwiper")) {
+          var featureSwiper = new Swiper(".featureSwiper", {
+            grabCursor: true,
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            pagination: {
+              el: ".swiper-pagination",
+              type: "progressbar",
+            },
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+            breakpoints: {
+              640: {
+                slidesPerView: "2",
+                spaceBetween: 20,
+              },
+              862: {
+                slidesPerView: "3",
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4.2,
+                spaceBetween: 15,
+              },
+            },
+            on: {
+              init: function () {
+                console.log("Feature Swiper initialized successfully");
+              },
+            },
+          });
+        }
+      } catch (error) {
+        console.error("Error initializing Feature Swiper:", error);
+      }
+
+      // Add CSS for smooth transitions
+      const style = document.createElement("style");
+      style.textContent = `
+    .tab-content {
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
+    
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+    
+    .accordion-content.active {
+      max-height: 500px; /* Adjust based on your content */
+    }
+    
+    details {
+      transition: all 0.3s ease;
+    }
+    
+    summary {
+      cursor: pointer;
+    }
+    
+    /* Animation for promotion banner */
+    .slide-up {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-out;
+    }
+    
+    /* For smooth fade-in effect */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.3s forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  `;
+      document.head.appendChild(style);
+
+      // Initialize the first tab
+      showTab(1);
+
+      // Initialize accordions
+      const accordionSections = document.querySelectorAll("#info, #questions");
+      accordionSections.forEach((section) => {
+        section.classList.add("accordion-content");
+        if (!section.classList.contains("hidden")) {
+          section.classList.add("active");
+        }
+      });
+
+      // Add event listeners for the details elements in desktop view (FAQ questions)
+      const detailsElements = document.querySelectorAll("details");
+
+      // Add smooth animation for details elements
+      detailsElements.forEach((details) => {
+        const summary = details.querySelector("summary");
+        const content = details.querySelector("p");
+
+        if (content) {
+          content.style.transition = "all 0.3s ease-in-out";
+        }
+
+        details.addEventListener("toggle", function (e) {
+          // Only run this when a details element is being opened
+          if (this.open) {
+            // Add animation class
+            if (content) content.classList.add("fade-in");
+
+            // Close all other details elements
+            detailsElements.forEach((otherDetails) => {
+              if (otherDetails !== this && otherDetails.open) {
+                otherDetails.open = false;
+              }
+            });
+          } else {
+            // Remove animation class
+            if (content) content.classList.remove("fade-in");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
