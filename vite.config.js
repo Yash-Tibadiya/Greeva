@@ -8,6 +8,9 @@ export default defineConfig({
     outDir: 'dist',
     input: {
       main: 'index.html',
+      bedroom: 'bed_room.html',
+      livingroom: 'living_room.html',
+      curtains: 'curtains.html'
     }
   },
 })
